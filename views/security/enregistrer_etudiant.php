@@ -1,4 +1,4 @@
-
+            <?php include('../layout/default.php') ; ?>
                     <div class="col-md-8">
                         <div id="inscription-form" class="w-100 bg-white container   text-secondary py-2">
                             <div class=" inscription-form-header">
@@ -6,7 +6,7 @@
                                 <p class="m-0 "><?=@$title?></p>
                                 <hr class="w-50 m-0">
                             </div>
-
+                         
                             <div class="inscription-form-body row">
                                 <div class="col-md-7">
                                     <form class="w-75">

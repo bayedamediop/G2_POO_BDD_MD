@@ -1,13 +1,30 @@
-<div class="mh-100 bg-light container " style=" Height:550px ";>
-     
-        <div class=" row-col-sm-3 col-md-6 col-lg-11 bg-light container" style=" Height:320px; margin-top: 30px; ">
-              <img src="<?=BASE_URL?>/public/img/bg.jpg" alt="" style=" Height:320px;width:100%">
-         </div>
-        <div class="col-sm-3 col-md-6 col-lg-10 container">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Minima, quaerat dolore libero natus laudantium aut ipsa ratione voluptate, quam, magni facilis
-          repudiandae dolorem a. Odit accusantium molestias ipsam atque eum!
+ 
+
+
+
+ <!-- BANNER -->
+    <!-- section agit en fonctions des elements contenus-->
+    <section>
+        <!-- occupe tt la largeur -->
+        <!-- heigh 100vh pr kil occuupe tt la hauteur de la page -->
+        <!-- justif...pour centrer de gauche droite et align item .. pour enhaut en bas -->
+      <div class="container-fluid">
+        <div
+          class="row bg-info justify-content-center align-items-center"
+          style="height: 148vh;width:100vw"
+        >
+          <div class="col-sm-10 text-center">
+              <!-- text capitalize pour ls debut mots en majuscule -->
+            <h1 class="display-2 text-capitalize text-warning">open anchor</h1>
+            <h2 class="font-weight-light font-italic text-light">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus!
+            </h2>
+            <!-- btn-lg pr que la boutn soit large padding 4 et m-2 margin de 2 -->
+            <a href="#" class="btn btn-warning btn-lg px-4 m-2">Contact Us</a>
+            <a href="#" class="btn btn-danger btn-lg px-4 m-2">Join Us</a>
+          </div>
         </div>
-    
-     
-    
-</div>.
+      </div>
+    </section>
+    <!-- END OF BANNER -->

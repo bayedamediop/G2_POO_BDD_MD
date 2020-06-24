@@ -1,4 +1,9 @@
  
+ 
+
+
+      
+
  <!doctype html>
  <html lang="en">
    <head>
@@ -35,7 +40,7 @@
             <a
              
               class="nav-link text-light font-weight-bold text-uppercase px-3" 
-              href=" <?php echo  $content_for_layout ;?>"
+              href=" <?=BASE_URL?>/views/layout/navbar.php"
               >Home</a
             >
           </li> 
@@ -48,7 +53,7 @@
               >ROOMS</a
             >
             <div class="dropdown-menu">
-              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/enregistrer_chambre.php">Save room</a>
+              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/enregistrerchambre.php">Save room</a>
               <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/listechambres.php">Lists room</a>
                <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updatechambre.php">Update room</a>
             </div>
@@ -61,8 +66,8 @@
               >STUDENTS</a
             >
             <div class="dropdown-menu">
-              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updateetudiant.php"> Update student</a>
-              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/enregistrer_etud.php" >Add student</a>
+              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updateetudiant.php">Update student</a>
+              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/enregistrer_etud.php">Add student</a>
               <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/enregistrer_chambre.php">List student</a>
                
             </div>
@@ -92,7 +97,13 @@
       </div>
     </nav>
     <!-- END OF NAV --> 
- 
+
+          
+              <div id="main" class="d-flex justify-content-center align-items-center"style=" Height:320px;width:100%">
+                    <!-- Afficher Les Vues du Layout -->
+                    <?php echo  $content_for_layout?>
+                
+           </div> 
      <!-- Optional JavaScript -->
      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

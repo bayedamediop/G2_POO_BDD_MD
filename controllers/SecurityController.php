@@ -3,21 +3,39 @@ class SecurityController extends Controller{
 
    public  function __construct(){
       $this->folder="security";
-      $this->layout="default";
+      $this->layout="navbar";
       $this->validator=new Validator();
     
    }
 
+   // method home page called
     public function index(){
         $this->view="connexion";
-         $this->render();
+         $this->render(
+        
+       );
 
     }
-    public function vinscription(){
-         $this->data_view["title"]="Pour tester votre niveau de culture générale";
+     
+    //methode pour inscription etudiant
+    public function vinscription(){ 
          $this->view="inscription";
          $this->render();
-}
+   }
+
+   //methode pour enregistrer chambre
+   public function saveroomn(){ 
+      $this->view="enregistrerchambre";
+      $this->render();
+   }
+
+   //methode lists chambres 
+    
+     public function listechambre(){ 
+      $this->view="enregistrerchambre";
+      $this->render();
+     }
+
     //Use Case
    public function connexion(){
 
@@ -66,4 +84,61 @@ class SecurityController extends Controller{
 
 
 
+   //ce que faisait admin 
+   
+
+      //      public  function __construct(){
+      //         $this->folder="security";
+      //         $this->layout="default";
+      //         $this->validator=new Validator();
+            
+      //      }
+        
+      
+      //      public function vinscription(){
+      //           $this->data_view["title"]="Pour tester votre niveau de culture générale";
+      //           $this->view="inscription";
+      //           $this->render();
+      //  }
+      //  public function getEtudiant(){
+           
+      //      $this->view="listeEtudiant";
+      //      $this->render();
+      // }
+      // public function bloquerJoueur(){
+      //      echo "Boquer";
+      // }
+      
+      // public function fixerNbreQuestion(){
+          
+      // }
+      
+      // public function modifierAdmin(){
+          
+      // }
+      
+      // public function supprimerAdmin(){
+          
+      // }
+
+
+      //ce que faisait joueur dans le quizz 
+      
+     
+//       public  function __construct(){
+//          $this->folder="security";
+//          $this->layout="default";
+//          $this->validator=new Validator();
+       
+//       }
+   
+ 
+//       public function vi(){
+          
+//            $this->view="moifier";
+//            $this->render();
+//   }
+
+
+       
 }
