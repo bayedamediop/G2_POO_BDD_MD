@@ -13,16 +13,24 @@ class SecurityController extends Controller{
         $this->view="connexion";
          $this->render(
         
+<<<<<<< HEAD
        );
 
     }
      
     //methode pour inscription etudiant
+=======
+       ); 
+    }
+     
+    //methode s'inscrire 
+>>>>>>> 599fffbb2ff059fbe94e843c39bc78de97493c61
     public function vinscription(){ 
          $this->view="inscription";
          $this->render();
    }
 
+<<<<<<< HEAD
    //methode pour enregistrer chambre
    public function saveroomn(){ 
       $this->view="enregistrerchambre";
@@ -36,6 +44,8 @@ class SecurityController extends Controller{
       $this->render();
      }
 
+=======
+>>>>>>> 599fffbb2ff059fbe94e843c39bc78de97493c61
     //Use Case
    public function connexion(){
 

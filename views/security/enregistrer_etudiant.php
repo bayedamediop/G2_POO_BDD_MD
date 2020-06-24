@@ -6,7 +6,11 @@
                                 <p class="m-0 "><?=@$title?></p>
                                 <hr class="w-50 m-0">
                             </div>
+<<<<<<< HEAD:views/security/enregistrer_etudiant.php
                          
+=======
+                        <h2>enregistrer chambre </h2>
+>>>>>>> 599fffbb2ff059fbe94e843c39bc78de97493c61:views/security/inscription.php
                             <div class="inscription-form-body row">
                                 <div class="col-md-7">
                                     <form class="w-75">

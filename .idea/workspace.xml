@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="956a13e2-1187-41bf-8dda-5be51cbf918d" name="Default Changelist" comment="" />
+    <list default="true" id="956a13e2-1187-41bf-8dda-5be51cbf918d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/UserDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/UserDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/Manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/IQuizz.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/IQuizz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/security/listeEtudiant.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/security/listeEtudiant.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../POO_MVC" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SvnConfiguration">
@@ -36,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1592845615736</updated>
       <workItem from="1592845617153" duration="1316000" />
+      <workItem from="1592990957714" duration="107000" />
     </task>
     <servers />
   </component>
@@ -47,6 +59,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="406" y="142" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1592845742799" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1592991062645">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1592991062645" />
     <state x="476" y="263" key="NewPhpFileDialog" timestamp="1592845894067">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

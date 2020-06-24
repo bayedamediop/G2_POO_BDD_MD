@@ -35,7 +35,11 @@
             <a
              
               class="nav-link text-light font-weight-bold text-uppercase px-3" 
+<<<<<<< HEAD
               href=" <?php echo  $content_for_layout ;?>"
+=======
+              href="#"
+>>>>>>> 599fffbb2ff059fbe94e843c39bc78de97493c61
               >Home</a
             >
           </li> 

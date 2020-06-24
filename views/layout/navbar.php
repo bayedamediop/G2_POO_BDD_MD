@@ -40,7 +40,11 @@
             <a
              
               class="nav-link text-light font-weight-bold text-uppercase px-3" 
+<<<<<<< HEAD
               href=" <?=BASE_URL?>/views/layout/navbar.php"
+=======
+              href="#"
+>>>>>>> 599fffbb2ff059fbe94e843c39bc78de97493c61
               >Home</a
             >
           </li> 
@@ -53,9 +57,15 @@
               >ROOMS</a
             >
             <div class="dropdown-menu">
+<<<<<<< HEAD
               <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/enregistrerchambre.php">Save room</a>
               <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/listechambres.php">Lists room</a>
                <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updatechambre.php">Update room</a>
+=======
+              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/enregistrer_chambre.php">Save room</a>
+              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/listechambre.php">>Lists room</a>
+               <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updatechambre.php">>Update room</a>
+>>>>>>> 599fffbb2ff059fbe94e843c39bc78de97493c61
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -66,9 +76,15 @@
               >STUDENTS</a
             >
             <div class="dropdown-menu">
+<<<<<<< HEAD
               <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updateetudiant.php">Update student</a>
               <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/enregistrer_etud.php">Add student</a>
               <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/enregistrer_chambre.php">List student</a>
+=======
+              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updateetudiant.php">>Update student</a>
+              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/enregistrer_etud.php">>Add student</a>
+              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/enregistrer_chambre.php">>List student</a>
+>>>>>>> 599fffbb2ff059fbe94e843c39bc78de97493c61
                
             </div>
           </li> 
