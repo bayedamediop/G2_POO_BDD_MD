@@ -9,15 +9,15 @@
       <li class="nav-item active">
        
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/POO_MVC/Admin/produit">Liste Prduits</a>
+        <a class="nav-link" href="<?=BASE_URL?>/Admin/produit">Liste Prduits</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost/POO_MVC/Admin/insert">Insert Clients</a>
+        <a class="nav-link" href="<?=BASE_URL?>/Admin/insert">Insert Clients</a>
         
       </li>
       <li class="nav-item">
        
-        <a class="dropdown-item" href=" http://localhost/POO_MVC/Chambre/add">Chambre</a>
+        <a class="dropdown-item" href=" <?=BASE_URL?>/Chambre/add">Chambre</a>
       </li>
       <li class="nav-item">
        
@@ -30,7 +30,7 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updateetudiant.php">>Update student</a>
               <a class="dropdown-item" href=" <?=BASE_URL?>/Admin/add">Add student</a>
-              <a class="nav-link" href="http://localhost/POO_MVC/Admin/index"><span class="sr-only">(current)</span>List student</a>
+              <a class="nav-link" href="<?=BASE_URL?>/Admin/index"><span class="sr-only">(current)</span>List student</a>
               
               
                
