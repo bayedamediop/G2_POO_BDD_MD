@@ -1,7 +1,7 @@
 <?php 
         // Pos $params[0] => Admin => $controlleur
         // Pos $params[1] => index => $methode 
-      define("BASE_URL","http://localhost/g2_poo");
+      define("BASE_URL","http://localhost/g2_poo/G2_POO_BDD_MD/");
         if($_GET['url'])
         {
             require_once('controlleurs/Parrent.php');

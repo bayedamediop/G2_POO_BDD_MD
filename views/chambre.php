@@ -10,11 +10,11 @@
     </div>
   </div>
    
- 
+   
   
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" name="submit" value="submit" class="btn btn-primary">Sign in</button>
+      <button type="submit" name="bouton" value="submit" class="btn btn-primary">Sign in</button>
     </div>
   </div>
   </div>
@@ -32,7 +32,7 @@
             </thead>
   <tbody>
 
-  <?php foreach($datas as $data) : ?>
+  <?php foreach($datas as $data) : ?>          
     <tr>
       <th scope="row"><?=$data['id']; ?></th>
       <td ><?=$data['numero_chambre']; ?></td>
