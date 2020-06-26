@@ -1,85 +1,62 @@
 <?php
-class Etudiant implements IQuizz 
+    class Etudiant extends Users implements IterfaceParrents
+    {
+
+        public function __construct($datas=[])
+        {
+            $this->table ="user" ;
+            $this->profile = "client" ;
+            parent::__construct($datas) ;
+        }
+        /**
+ * GENERE MATRICULE
+ */
+function genererMatricule()
 {
-    //Attributs
-       //Encapsulation
-        protected  $id;
-        protected  $matricule;
-        protected  $nom;
-        protected  $prenom;
-        protected  $telephone;
-        protected  $email;
-        protected  $date_de_naissance;
-// public abstract  function hydrate($row);   
-  
-    //  public   function __construct($row=null){
-    //      if($row!=null){
-    //          $this->hydrate($row);
-    //      }
+    $this->getConnection();
+    $mat="A/O00";
+    $date=Date('y');
+    $sql=("SELECT MAX(id) AS matricule FROM " . $this->table);
+    $query = $this->connexion->prepare($sql) ;
+    $req= $query->execute();
+    if($req)
+    {
+        //if(mysqli_num_rows($req)>0)
+        //{
+        $tab=$req->fetch();
+        $max_mat=$tab['matricule'];
+    }
+    else
+    {
+        $max_mat=1;
+    }
 
-    //  }
-    
-    //  public  function hydrate($row){
-    //     $this->id=$row['id']; 
-    //     $this->nomComplet=$row['nomComplet']; 
-    //     $this->profil=$row['profil']; 
-    //  }
-    
-      //Methodes
-        //Getters
-        public function getId(){
-            return $this->id;
-        }
-        public function getmatriculet(){
-            return $this->matricule;
-        }
-
-        public function getnom(){
-            return $this->nom;
-        }
-
-        public function getprenom(){
-            return $this->prenom;
-        }
-
-        public function gettelephone(){
-            return $this->statut;
-        }
-
-        public function getemail(){
-            return $this->avatar;
-        }
-
-        public function getdate_de_naissance(){
-            return $this->profil;
-        }
-
-        //Setters
-    
-        public function setId($id){
-             $this->id=$id;
-        }
-        public function setmatricule($matricule){
-             $this->matricule=$matricule;
-        }
-
-        public function setnom($nom){
-            $this->nom=$nom;
-        }
-
-        public function setprenom($prenom){
-             $this->prenom=$prenom;
-        }
-
-        public function settelephone($telephone){
-           $this->telephone=$telephone;
-        }
-
-        public function setemail($email){
-            $this->email=$email;
-        }
-
-        public function setdate_de_naissance($date_de_naissance){
-            $this->$date_de_naissance=$date_de_naissance;
-        }
+    return $mat."".$date."".($max_mat+1);
 }
+
+        public function add() 
+        {
+            echo "insertion";
+            die();
+            $this->getConnection() ;
+            $sql = "INSERT INTO " . $this->table . " VALUES (null,:prenomEtNom,:profile,:log,:pwd)" ;
+            $query = $this->connexion->prepare($sql) ;
+            return $query->execute(array(
+                'prenomEtNom' => $this->prenomEtNom,
+                'profile' => $this->profile,
+                'log' => $this->log,
+                'pwd' => $this->pwd
+            ));
+        }
+
+        public function getAll()
+       {
+           $this->getConnection() ;
+           $sql = "SELECT * FROM " . $this->table ;
+           $query = $this->connexion->prepare($sql) ;
+           $query->execute();
+           return $query->fetchAll();
+        }
+
+    }
+?>

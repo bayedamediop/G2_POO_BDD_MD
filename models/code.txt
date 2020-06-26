@@ -1,0 +1,19 @@
+        require_once('models/InterfaceParrents.php');
+        require_once('models/ModelParrents.php');
+        require_once('models/Users.php');
+        require_once('models/Clients.php');
+        $cl = ['id'=> 1,'prenomEtNom'=> 'Fatou Diop','log'=> 'ftou2020','pwd'=>'ftou2020'] ;
+        $cl = new Clients($cl);
+        var_dump($cl);
+        var_dump($cl->add());
+        die();
+
+
+        /*
+            $query->bindParam(':prenomEtNom',$this->prenomEtNom) ;
+            $query->bindParam(':profile',$this->profile) ;
+            $query->bindParam(':log',$this->log) ;
+            $query->bindParam(':pwd',$this->pwd) ;
+            return $query->execute();
+        */
+         

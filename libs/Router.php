@@ -25,8 +25,8 @@ class Router{
              if(isset($_GET['url'])){
                 $url=explode("/",filter_var($_GET['url'],FILTER_SANITIZE_URL));
                   //Classe Controller
-                  $ctrl= ucfirst(strtolower($url[0]))."Controller";
-                  $pathCtrl="./controllers/".$ctrl.".php";
+                  $ctrl= ucfirst(strtolower($url[0]));
+                  $pathCtrl="./controlleurs/".$ctrl.".php";
                     if(file_exists($pathCtrl)){
                         require_once($pathCtrl);
                         //Instancier un Objet Controller
@@ -37,22 +37,22 @@ class Router{
                            $this->ctrl->{$action}();
                         }else{
                          //Action n'Existe pas dans le Controller
-                          $pathCtrl="./controllers/ErreurController.php";
+                          $pathCtrl="./controlleurs/Erreur.php";
                           require_once($pathCtrl);
-                          $erreurCtrl=new ErreurController();
+                          $erreurCtrl=new Erreur();
                           $erreurCtrl->showError("Cette Methode   n'existe Pas");
                         }
                         
                     }else{
-                        $pathCtrl="./controllers/ErreurController.php";
+                        $pathCtrl="./controlleurs/Erreur.php";
                         require_once($pathCtrl);
-                        $erreurCtrl=new ErreurController();
+                        $erreurCtrl=new Erreur();
                         $erreurCtrl->showError("Ce controller n'existe Pas");
                     }
              }else{
-                $pathCtrl="./controllers/SecurityController.php";
+                $pathCtrl="./controlleurs/Security.php";
                 require_once($pathCtrl);
-                $this->ctrl=new SecurityController();
+                $this->ctrl=new Security();
                 $this->ctrl->index();
              }
              

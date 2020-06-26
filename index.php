@@ -1,31 +1,28 @@
-<!doctype html>
-<html lang="en">
+<?php 
+        // Pos $params[0] => Admin => $controlleur
+        // Pos $params[1] => index => $methode 
+      define("BASE_URL","http://localhost/POO_MVC");
+        if($_GET['url'])
+        {
+            require_once('controlleurs/Parrent.php');
+            require_once('models/InterfaceParrents.php');
+            require_once('models/ModelParrents.php');
+            require_once('models/Users.php');
+            // recupe les valeur de url dans un tableau $params => arry
+            $params = explode('/',$_GET['url']) ;
+            // recuper le controlleur et verifier s'il existe
+            $controlleur = isset($params[0]) && file_exists('controlleurs/'.$params[0].'.php') ? $params[0] : 'Erreur';
+            // inclusion du class demander ou la class Erruer
+            require_once('controlleurs/'.$controlleur.'.php') ;
+            // recure la methode et verifier si la methode existe
+            $methode = isset($params[1]) && method_exists($controlleur,$params[1]) ? $params[1] : "erreurPage";
+            // instantiation du class controlleur
+            $controlleur = new $controlleur() ;
+            // appel d'une methode de se class controlleur
+            $controlleur->$methode();
+           // require_once("http://localhost/POO_MVC/Security/index");
+        }
 
-<head>
-    <title>HOME PAGE</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?=BASE_URL?>/public/css/bootstrap.min.css">
-     <link rel="stylesheet" href="<?=BASE_URL?>/public/css/classe.css"> 
+?>
 
 
-</head>
-<?php
- 
-//Chargement dynamique  des classes=> AutoLoading
-  //url dynamik
-define("BASE_URL","http://localhost/code/first%20proet%20POO/G2_POO_BDD_MD/");
-require_once("./libs/Router.php");
-$router=new Router();
-$router->route();
-
- // surchargement d'une methode : ajouter ces fonctionnalités  , équivalent de la function construct ,on creer et on initialise a la fois 
-
-// $user1=new Etudiant([
-//     "id"=>1,
-//     "nomComplet"=>"Oumar Anne"
-// ]
-// );
-// var_dump($user1);
