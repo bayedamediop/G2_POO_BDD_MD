@@ -12,6 +12,8 @@
              // 4 Affichage du tableua
              $this->render('listeEtudiant',compact('datas')) ;
          }
+
+         //page d'acceuil 
           public function index()
           {
                // 1 charge la class client dans models
@@ -22,6 +24,7 @@
                // 4 Affichage du tableua
                $this->render('listeEtudiant',compact('datas')) ;
           }
+          
           public function add()
           {
                // 1 charge la class client dans models

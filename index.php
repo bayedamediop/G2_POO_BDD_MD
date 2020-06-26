@@ -22,7 +22,7 @@
             $controlleur->$methode();
            // require_once("http://localhost/POO_MVC/Security/index");
         }
-
+          
 ?>
 
 
