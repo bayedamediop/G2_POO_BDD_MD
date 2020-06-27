@@ -36,6 +36,8 @@
     <tr>
       <th scope="row"><?=$data['id']; ?></th>
       <td ><?=$data['numero_chambre']; ?></td>
+      <td><button type="button" id="'.$data['id'].'" class="btn btn-warning btn-xs update">Update</button></td>
+        <td><button type="button" id="'.$data['id'].'" class="btn btn-danger btn-xs delete">Delete</button></td>
      
       
     </tr>

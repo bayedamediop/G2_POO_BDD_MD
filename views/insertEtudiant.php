@@ -1,39 +1,51 @@
 
-
+<style>
+  .error_form{
+           display:block;
+          margin-top:-15px;
+          color:red;
+        }
+</style>
   
   <div class="container-fluid">
      <h4>XLarge Grid</h4>
      <form method="POST" action="">
     <div class="row">
-      <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 bg-success">
+      <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 bg-light">
   <div class="form-group row">
     <label for="Matricule" class="col-sm-2 col-form-label">Matricule</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="Matricule" id="Matricule" placeholder="Matricule">
+      <input type="text" class="form-control" name="Matricule" id="Matricule" placeholder="Matricule"><br>
+      <span class="error_form" id="mat"> </span>
     </div>
   </div>
   <div class="form-group row">
     <label for=" Nom" class="col-sm-2 col-form-label">Nom</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="nom" id="nom" placeholder=" Nom">
+      <input type="text" class="form-control" name="nom" id="nom" placeholder=" Nom"><br>
+      <span class="error_form" id="nom_error_message"> </span>
     </div>
   </div>
   <div class="form-group row">
     <label for=" Prenom" class="col-sm-2 col-form-label">Prenom</label>
+    
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="prenom" id="prenom" placeholder=" Prenom">
+      <input type="text" class="form-control" name="prenom" id="prenom" placeholder=" Prenom"><br>
+      <span class="error_form" id="prenom_error_message"> </span>  
     </div>
   </div>
    <div class="form-group row">
     <label for="Telephoe" class="col-sm-2 col-form-label">Telephoe</label>
     <div class="col-sm-10">
-      <input type="telephoe" class="form-control" name="telephoe" id="telephoe" placeholder="telephoe">
+      <input type="telephone" class="form-control" name="telephone" id="telephone" placeholder="telephne"><br>
+      <span class="error_form" id="telephone_error_message"> </span>
     </div>
   </div>
  <div class="form-group row">
     <label for="Email" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="email" id="email" placeholder="email">
+      <input type="text" class="form-control" name="email" id="email" placeholder="email"><br>
+      <span class="error_form" id="email_error_message"> </span>
     </div>
   </div>
  
@@ -45,11 +57,11 @@
   </div>
  
      </div>
-      <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 bg-warning">
+      <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 bg-light">
       <select name="type" class="custom-select col-md-6" id="type" name="type">
       <option value="">Choix la Type d'Etudiant</option>
-        <option value="boursier">choix multiple </option>
-        <option value="nonboursier">choix simple </option>
+        <option value="boursier">boursier  </option>
+        <option value="nonboursier">nonboursier </option>
      </div>  
   </select>
   <div class="form-group row">
@@ -65,31 +77,34 @@
       </div>
     </div>
     <script src="../asset/js/jquery.min.js"></script>
+    <script src="../asset/ajax/valideFormulaire.js"></script>
            <script type="text/javascript">
-           $(document).ready(function(){
-      
-        
-            var type = $("#type").val();
-            
-            if(type =="boursier"){
-                // alert($("#typ"));
-               
-                $("#choix").append('<input type="radio" name="2000" value="2000"">',
-                    '<input type="radio" name="2000" value="2000"">');
-            }
-            if(type =="nonboursier"){
-                // alert($("#typ"));
-              
-                $("#choix").append('<input type="text"   name="adresse" placeholder="Réponse">' );
-            }
-            if(type =="choixtext"){
-                // alert($("#typ"));
 
-                $("#choix").append('<textarea name="rep" placeholder="Réponse" style=width:230px; float:left; height: 30px;" name="name[]"></textarea>' );
-            }
+
+
+
+   //    $(document).ready(function(){
+        //     var type = $("#type").val();
+        //     // alert(type);
+        //     if(type =="boursier"){
+        //         // alert($("#typ"));
+        //         alert(type);
+        //      echo ($("#choix").append('<input type="radio" name="2000" value="2000"">',
+        //             '<input type="radio" name="2000" value="2000"">') ) ;
+        //     }
+        //     if(type =="nonboursier"){
+        //         // alert($("#typ"));
+              
+        //         $("#choix").append('<input type="text"   name="adresse" placeholder="Réponse">' );
+        //     }
+        //     if(type =="choixtext"){
+        //         // alert($("#typ"));
+
+        //         $("#choix").append('<textarea name="rep" placeholder="Réponse" style=width:230px; float:left; height: 30px;" name="name[]"></textarea>' );
+        //     }
         
-        });
-           </script>
+        // });
+        </script>  
      </form>
   </div>
     
