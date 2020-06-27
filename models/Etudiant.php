@@ -1,4 +1,5 @@
 <?php
+echo "bonjour" ;
     class Etudiant extends Users implements IterfaceParrents
     {
 
@@ -9,30 +10,30 @@
             parent::__construct($datas) ;
         }
         /**
- * GENERE MATRICULE
- */
-function genererMatricule()
-{
-    $this->getConnection();
-    $mat="A/O00";
-    $date=Date('y');
-    $sql=("SELECT MAX(id) AS matricule FROM " . $this->table);
-    $query = $this->connexion->prepare($sql) ;
-    $req= $query->execute();
-    if($req)
-    {
-        //if(mysqli_num_rows($req)>0)
-        //{
-        $tab=$req->fetch();
-        $max_mat=$tab['matricule'];
-    }
-    else
-    {
-        $max_mat=1;
-    }
+         * GENERE MATRICULE
+         */
+        function genererMatricule()
+        {
+            $this->getConnection();
+            $mat="A/O00";
+            $date=Date('y');
+            $sql=("SELECT MAX(id) AS matricule FROM " . $this->table);
+            $query = $this->connexion->prepare($sql) ;
+            $req= $query->execute();
+            if($req)
+            {
+                //if(mysqli_num_rows($req)>0)
+                //{
+                $tab=$req->fetch();
+                $max_mat=$tab['matricule'];
+            }
+            else
+            {
+                $max_mat=1;
+            }
 
-    return $mat."".$date."".($max_mat+1);
-}
+            return $mat."".$date."".($max_mat+1);
+        }
 
         public function add() 
         {
