@@ -13,9 +13,9 @@
     <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 bg-light">
   <div class="form-group row">
-    <label for="Matricule" class="col-sm-2 col-form-label">Matricule</label>
+    <label for="matricule" class="col-sm-2 col-form-label">Matricule</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="Matricule" id="Matricule" placeholder="Matricule"><br>
+      <input type="text" class="form-control" name="matricule" id="matricule" value="" placeholder="Matricule"><br>
       <span class="error_form" id="mat"> </span>
     </div>
   </div>
@@ -50,9 +50,9 @@
   </div>
  
   <div class="form-group row">
-    <label for="Date de Naissance	" class="col-sm-2 col-form-label">Date de Naissance	</label>
+    <label for="dateNaissance" class="col-sm-2 col-form-label" >Date de Naissance	</label>
     <div class="col-sm-10">
-      <input type="date" class="form-control" name="Date de Naissance	" id="Date de Naissance"	>
+      <input type="date" class="form-control" name="dateNaissance"  id="dateNaissance">
     </div>
   </div>
  
@@ -71,39 +71,35 @@
  
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" id="submit" class="submit btn btn-success">S'Inscrire</button>
+      <button type="submit" name="bouton" id="submit" class="submit btn btn-success">S'Inscrire</button>
     </div>
   </div>
       </div>
     </div>
     <script src="../asset/js/jquery.min.js"></script>
-    <script src="../asset/ajax/valideFormulaire.js"></script>
+   <script src="../asset/ajax/valideFormulaire.js"></script>
            <script type="text/javascript">
-
-
-
-
-   //    $(document).ready(function(){
-        //     var type = $("#type").val();
-        //     // alert(type);
-        //     if(type =="boursier"){
-        //         // alert($("#typ"));
-        //         alert(type);
-        //      echo ($("#choix").append('<input type="radio" name="2000" value="2000"">',
-        //             '<input type="radio" name="2000" value="2000"">') ) ;
-        //     }
-        //     if(type =="nonboursier"){
-        //         // alert($("#typ"));
+      $(document).ready(function(){
+            var type = $("#type").val();
+            // alert(type);
+            if(type =="boursier"){
+                // alert($("#typ"));
+               // alert(type);
+             echo ($("#choix").append('<input type="radio" name="2000" value="2000"">',
+                    '<input type="radio" name="2000" value="2000"">') ) ;
+            }
+            if(type =="nonboursier"){
+                // alert($("#typ"));
               
-        //         $("#choix").append('<input type="text"   name="adresse" placeholder="Réponse">' );
-        //     }
-        //     if(type =="choixtext"){
-        //         // alert($("#typ"));
+              echo ($("#choix").append('<input type="text"   name="adresse" placeholder="Réponse">' ));
+            }
+            if(type =="choixtext"){
+                // alert($("#typ"));
 
-        //         $("#choix").append('<textarea name="rep" placeholder="Réponse" style=width:230px; float:left; height: 30px;" name="name[]"></textarea>' );
-        //     }
+                $("#choix").append('<textarea name="rep" placeholder="Réponse" style=width:230px; float:left; height: 30px;" name="name[]"></textarea>' );
+            }
         
-        // });
+        });
         </script>  
      </form>
   </div>

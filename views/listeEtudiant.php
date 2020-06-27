@@ -1,8 +1,8 @@
 <div class="container">
    
     
-    <form class="form-inline" action="/action_page.php">
-        <input class="form-control mr-sm-2" type="text" name="rechrge" placeholder="Search">
+    <form class="form-inline" method="POST">
+        <input class="form-control mr-sm-2" type="text" name="chercher" placeholder="Search">
         <button class="btn btn-success" type="submit" name="rechrge">RECHERGER</button>
         <h4>LISTES DES ETUDIANTS</h4>
     </form>
@@ -11,8 +11,9 @@
             <thead class="thead-dark">
             <tr>
                 <th>Id</th>
-                <th>Non</th>
                 <th>Maruicule</th>
+                <th>Non</th>
+               
                 <th>Prenom</th>
                 <th>Email</th>
                 <th>Date de Naissance</th>
@@ -33,7 +34,7 @@
       <td><?=$data['prenom']; ?></td>
       <td><?=$data['nom']; ?></td>
       <td><?=$data['Email']; ?></td>
-      <td><?=$data['Date de Naissance']; ?></td>
+      <td><?=$data['dateNaissance']; ?></td>
       
     </tr>
   <?php endforeach ?>

@@ -37,7 +37,7 @@ class Router{
                            $this->ctrl->{$action}();
                         }else{
                          //Action n'Existe pas dans le Controller
-                          $pathCtrl="./controlleurs/Erreur.php";
+                          $pathCtrl="./controlleurs/ErreurController.php";
                           require_once($pathCtrl);
                           $erreurCtrl=new Erreur();
                           $erreurCtrl->showError("Cette Methode   n'existe Pas");

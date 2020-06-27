@@ -31,7 +31,7 @@
                         'numero_chambre' => $this->numero_chambre  
                     
                     ));
-                    var_dump($numero_chambre) ; 
+                   // var_dump($numero_chambre) ; 
                // }else{
                    // die() ;
                // }  
