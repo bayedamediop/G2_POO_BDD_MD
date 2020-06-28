@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
- 
-=======
->>>>>>> 4cb093a41efd57f11e1259ffa2bf4db7c279c4a9
     class Etudiant extends Users implements IterfaceParrents
     {
         protected  $matricul;       
@@ -78,51 +74,7 @@
                        //yyyy echo"cool" ;
             }   
         }
-<<<<<<< HEAD
-     
-=======
-        public function insert() 
-        {      
-            $mat=0;
-            $date=Date('yy');                    
-            if (isset($_POST['bouton']) ) { 
-               
-                $nom=$_POST['nom'];
-                $cc= strtoupper (substr("$nom",0,2));
-                $prenom=$_POST['prenom'];
-                $ll=strtoupper(substr("$prenom",-2));
-                $telepohne=$_POST['telephone'];
-                $email=$_POST['email'];
-                $dateNaissance=$_POST['dateNaissance'];
-                $matricule=$date."".$cc."".$ll."".$mat;
-
-                  
-                          //var_dump($matricul);
-                         
-                         // var_dump($ll);
-                          extract($_POST);  
-                   
-                       // $this->getConnection() ;
-                        $sql = "INSERT INTO " . $this->table . " VALUES (null,'$matricule','$nom','$prenom','$telepohne','$email','$dateNaissance')" ;
-                          $query = $this->connexion->prepare($sql) ;
-                        return $query->execute(array(
-                        'matricul' => $this->matricule,
-                        'nom' => $this->nom  ,
-                        'prenom' => $this->prenom  ,
-                        'telepohne' => $this->telepohne  ,
-                        'email' => $this->email  ,
-                        'dateNaissance' => $this->dateNaissance  ,
-                    
-                    ));
-                    $mat=$mat+1;
-                   // var_dump($numero_chambre) ; 
-               // }else{
-                   // die() ;
-               // }  
-            }  
-        }
->>>>>>> 4cb093a41efd57f11e1259ffa2bf4db7c279c4a9
-
+        
         public function getAll()
        {
         if (!(isset($_POST['rechrge'])))
@@ -143,17 +95,9 @@
            $query->execute();
            return $query->fetchAll();
         }
-
-        public function delete(){
-
-        }
+ 
 
     }
-<<<<<<< HEAD
-
- 
-=======
 }
 
->>>>>>> 4cb093a41efd57f11e1259ffa2bf4db7c279c4a9
 ?>
