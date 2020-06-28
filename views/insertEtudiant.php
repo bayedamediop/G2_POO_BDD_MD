@@ -15,7 +15,7 @@
   <div class="form-group row">
     <label for="Matricule" class="col-sm-2 col-form-label">Matricule</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="Matricule" id="Matricule" placeholder="Matricule"><br>
+      <input type="text" class="form-control" name="matrik" id="Matricule" placeholder="Matricule"><br>
       <span class="error_form" id="mat"> </span>
     </div>
   </div>
@@ -71,7 +71,7 @@
  
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" id="submit" class="submit btn btn-success">S'Inscrire</button>
+      <button type="submit" name="subscribe" id="submit" class="submit btn btn-success">S'Inscrire</button>
     </div>
   </div>
       </div>

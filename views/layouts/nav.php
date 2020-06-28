@@ -4,22 +4,18 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#">Hidden brand</a>
+    <a class="navbar-brand" href="#"><strong>HOME</strong></a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-       
-      <li class="nav-item">
-        <a class="nav-link" href="<?=BASE_URL?>/Admin/produit">Liste Prduits</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?=BASE_URL?>/Admin/insert">Insert Clients</a>
+      
+       <!--  <li class="nav-item">
+        <a class="nav-link" href=" /Admin/insert">Insert Clients</a>
         
+      </li>-->
+      <li class="nav-item"> 
+           <a class="dropdown-item" href=" <?=BASE_URL?>/Chambre/add"><h5> <strong>Chambre</strong></h5></a>
       </li>
-      <li class="nav-item">
-       
-        <a class="dropdown-item" href=" <?=BASE_URL?>/Chambre/add">Chambre</a>
-      </li>
-      <li class="nav-item">
+      <li class="nav-item"> 
        
     
      </li>
@@ -28,11 +24,9 @@
               class="nav-link dropdown-toggle "data-toggle="dropdown"
               href="#">STUDENTS</a >
             <div class="dropdown-menu">
-              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updateetudiant.php">>Update student</a>
+              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updateetudiant.php">Update student</a>
               <a class="dropdown-item" href=" <?=BASE_URL?>/Admin/add">Add student</a>
-              <a class="nav-link" href="<?=BASE_URL?>/Admin/index"><span class="sr-only">(current)</span>List student</a>
-              
-              
+              <a class="nav-link" href="<?=BASE_URL?>/Admin/index"> List student </a>
                
             </div>
           </li>
