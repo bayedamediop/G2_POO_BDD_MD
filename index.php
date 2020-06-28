@@ -1,9 +1,16 @@
 <?php 
-        // Pos $params[0] => Admin => $controlleur
+         require_once('controlleurs/Parrent.php');
+         require_once('models/InterfaceParrents.php');
+         require_once('models/ModelParrents.php');
+         require_once('controlleurs/Admin.php');
+         require_once('models/Users.php');
+        $index= new  Admin() ;
+        $index->produit() ;
+                // Pos $params[0] => Admin => $controlleur
         // Pos $params[1] => index => $methode 
-      define("BASE_URL","http://localhost/g2_poo");
+        define("BASE_URL","http://localhost/g2_poo/G2_POO_BDD_MD");
         if($_GET['url'])
-        {
+        { 
             require_once('controlleurs/Parrent.php');
             require_once('models/InterfaceParrents.php');
             require_once('models/ModelParrents.php');
@@ -22,6 +29,8 @@
             // appel d'une methode de se class controlleur
             $controlleur->$methode();
            // require_once("http://localhost/POO_MVC/Security/index");
+               
+
         }
  
 ?>
