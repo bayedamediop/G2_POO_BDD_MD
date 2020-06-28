@@ -15,15 +15,12 @@
   <div class="form-group row">
     <label for="matricule" class="col-sm-2 col-form-label">Matricule</label>
     <div class="col-sm-10">
-<<<<<<< HEAD
+
       <input type="hidden" class="form-control" name="matricule" id="matricule" value="" placeholder="Matricule"><br>
-=======
-<<<<<<< HEAD
+
       <input type="text" class="form-control" name="matrik" id="Matricule" placeholder="Matricule"><br>
-=======
+
       <input type="text" class="form-control" name="matricule" id="matricule" value="" placeholder="Matricule"><br>
->>>>>>> 4cb093a41efd57f11e1259ffa2bf4db7c279c4a9
->>>>>>> baee9d406d16f4ae99260054d8aa76d0bba33ce0
       <span class="error_form" id="mat"> </span>
     </div>
   </div>
@@ -88,11 +85,7 @@
  
   <div class="form-group row">
     <div class="col-sm-10">
-<<<<<<< HEAD
-      <button type="submit" name="subscribe" id="submit" class="submit btn btn-success">S'Inscrire</button>
-=======
       <button type="submit" name="bouton" id="submit" class="submit btn btn-success">S'Inscrire</button>
->>>>>>> 4cb093a41efd57f11e1259ffa2bf4db7c279c4a9
     </div>
   </div>
       </div>

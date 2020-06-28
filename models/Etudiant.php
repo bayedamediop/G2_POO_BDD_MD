@@ -80,11 +80,11 @@
                         'matricule' => $this->matricule,
                         'nom' => $this->nom ,
                         'prenom' => $this->prenom  ,
-                        'telepohne' => $this->telepohne  ,
+                        'telephone' => $this->telephone  ,
                         'email' => $this->email  ,
                         'dateNaissance' => $this->dateNaissance  ,
                         'type_user' => $this->type_user  ,
-                        'prix_bouse' => $this->prix_bourse 
+                        'prix_bourse' => $this->prix_bourse 
                     
                     ));
                    
