@@ -15,7 +15,7 @@
   <div class="form-group row">
     <label for="matricule" class="col-sm-2 col-form-label">Matricule</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="matricule" id="matricule" value="" placeholder="Matricule"><br>
+      <input type="hidden" class="form-control" name="matricule" id="matricule" value="" placeholder="Matricule"><br>
       <span class="error_form" id="mat"> </span>
     </div>
   </div>
@@ -58,12 +58,21 @@
  
      </div>
       <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 bg-light">
-      <select name="type" class="custom-select col-md-6" id="type" name="type">
+      <select name="type_user" class="custom-select col-md-6" id="type_user" name="type_user">
       <option value="">Choix la Type d'Etudiant</option>
         <option value="boursier">boursier  </option>
         <option value="nonboursier">nonboursier </option>
-     </div>  
+       
+    
   </select>
+ 
+      <select name="prix_bourse" class="custom-select col-md-6" id="prix" name="prix_bourse">
+      <option value="">Choix la Type d'Etudiant</option>
+        <option value="2000">2000 FR  </option>
+        <option value="'4000'">4000 FR</option>
+    
+  </select>
+ 
   <div class="form-group row">
   <div id="choix" class="form-group">
   </div>
@@ -76,8 +85,9 @@
   </div>
       </div>
     </div>
+    </div>  
     <script src="../asset/js/jquery.min.js"></script>
-   <script src="../asset/ajax/valideFormulaire.js"></script>
+   <!-- <script src="../asset/ajax/valideFormulaire.js"></script> -->
            <script type="text/javascript">
       $(document).ready(function(){
             var type = $("#type").val();

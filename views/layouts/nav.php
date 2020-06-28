@@ -7,14 +7,6 @@
     <a class="navbar-brand" href="#">Hidden brand</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-       
-      <li class="nav-item">
-        <a class="nav-link" href="<?=BASE_URL?>/Admin/produit">Liste Prduits</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?=BASE_URL?>/Admin/insert">Insert Clients</a>
-        
-      </li>
       <li class="nav-item">
        
         <a class="dropdown-item" href=" <?=BASE_URL?>/Chambre/add">Chambre</a>
@@ -28,8 +20,8 @@
               class="nav-link dropdown-toggle "data-toggle="dropdown"
               href="#">STUDENTS</a >
             <div class="dropdown-menu">
-              <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updateetudiant.php">>Update student</a>
-              <a class="dropdown-item" href=" <?=BASE_URL?>/Admin/add">Add student</a>
+              <!-- <a class="dropdown-item" href=" <?=BASE_URL?>/views/security/updateetudiant.php">>Update student</a> -->
+              <a class="nav-link" href=" <?=BASE_URL?>/Admin/add"><span class="sr-only">(current)</span>Add student</a>
               <a class="nav-link" href="<?=BASE_URL?>/Admin/index"><span class="sr-only">(current)</span>List student</a>
               
               

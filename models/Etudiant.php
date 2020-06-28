@@ -36,26 +36,27 @@
             return $date."".$mat.""($max_mat+1);
         }
 
-        public function add() 
+        /**
+         * select max id
+         */
+        public function maxId()
         {
-            echo "insertion";
-            die();
-            $this->getConnection() ;
-            $sql = "INSERT INTO " . $this->table . " VALUES (null,:prenomEtNom,:profile,:log,:pwd)" ;
-            $query = $this->connexion->prepare($sql) ;
-            return $query->execute(array(
-                'prenomEtNom' => $this->prenomEtNom,
-                'profile' => $this->profile,
-                'log' => $this->log,
-                'pwd' => $this->pwd
-            ));
-        }
+         $this->getConnection() ;
+         $sql=$this->connexion->prepare("SELECT MAX(id) AS max FROM " . $this->table);
+         $sql->execute();
+         $invNum = $sql->fetch(PDO::FETCH_ASSOC);
+         $max_id = $invNum['max'];
+           return ($max_id+1);
+         }
         public function insert() 
         {      
-            $mat=0;
+          $mat=$this->maxId();
+        // var_dump($mat);
+          
             $date=Date('yy');                    
             if (isset($_POST['bouton']) ) { 
                
+                extract($_POST);  
                 $nom=$_POST['nom'];
                 $cc= strtoupper (substr("$nom",0,2));
                 $prenom=$_POST['prenom'];
@@ -63,33 +64,36 @@
                 $telepohne=$_POST['telephone'];
                 $email=$_POST['email'];
                 $dateNaissance=$_POST['dateNaissance'];
+                $type_user=$_POST['type_user'];
+                $prix_bourse=$_POST['prix_bourse'];
                 $matricule=$date."".$cc."".$ll."".$mat;
 
-                  
-                          //var_dump($matricul);
-                         
-                         // var_dump($ll);
-                          extract($_POST);  
+                          
                    
-                       // $this->getConnection() ;
-                        $sql = "INSERT INTO " . $this->table . " VALUES (null,'$matricule','$nom','$prenom','$telepohne','$email','$dateNaissance')" ;
+                        $this->getConnection() ;
+                        $sql = "INSERT INTO " . $this->table . " VALUES 
+                        (null,' $matricule ',' $nom ','$prenom','$telepohne','$email','$dateNaissance','$type_user','$prix_bourse')" ;
                           $query = $this->connexion->prepare($sql) ;
                         return $query->execute(array(
-                        'matricul' => $this->matricule,
-                        'nom' => $this->nom  ,
+                        'matricule' => $this->matricule,
+                        'nom' => $this->nom ,
                         'prenom' => $this->prenom  ,
                         'telepohne' => $this->telepohne  ,
                         'email' => $this->email  ,
                         'dateNaissance' => $this->dateNaissance  ,
+                        'type_user' => $this->type_user  ,
+                        'prix_bouse' => $this->prix_bourse 
                     
                     ));
-                    $mat=$mat+1;
+                   
+                 
                    // var_dump($numero_chambre) ; 
                // }else{
                    // die() ;
                // }  
             }  
         }
+        public function add(){}
 
         public function getAll()
        {
@@ -106,7 +110,7 @@
         {
         $chercher=$_POST['chercher'];
            $this->getConnection() ;
-           $sql = "SELECT * FROM " . $this->table." WHERE matricule like '%$chercher%' OR nom like '%$chercher%'";
+           $sql = "SELECT * FROM " . $this->table." WHERE matricule like '%$chercher%' OR type_user like '%$chercher%'";
            $query = $this->connexion->prepare($sql) ;
            $query->execute();
            return $query->fetchAll();
