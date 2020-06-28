@@ -7,6 +7,7 @@
             require_once('controlleurs/Parrent.php');
             require_once('models/InterfaceParrents.php');
             require_once('models/ModelParrents.php');
+            require_once('controlleurs/Admin.php');
             require_once('models/Users.php');
             // recupe les valeur de url dans un tableau $params => arry
             $params = explode('/',$_GET['url']) ;
@@ -22,7 +23,7 @@
             $controlleur->$methode();
            // require_once("http://localhost/POO_MVC/Security/index");
         }
-          
+ 
 ?>
 
 

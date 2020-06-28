@@ -1,4 +1,5 @@
 <?php
+ 
     class Etudiant extends Users implements IterfaceParrents
     {
         protected  $matricul;       
@@ -35,6 +36,7 @@
            // return $mat."".$date."".($max_mat+1);
             return $date."".$mat.""($max_mat+1);
         }
+
 
         /**
          * select max id
@@ -93,7 +95,7 @@
                // }  
             }  
         }
-        public function add(){}
+
 
         public function getAll()
        {
@@ -116,7 +118,10 @@
            return $query->fetchAll();
         }
 
+      
+
     }
+    public function add(){}
 }
 
 ?>
